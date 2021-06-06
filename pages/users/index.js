@@ -6,7 +6,7 @@ const index = () => {
 
             <h1>All Users...</h1>
 
-            <Link href="/"><a>Back to home</a></Link>
+            
         </div>
 
     );
