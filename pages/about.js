@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 
 const About = () => {
 
-    document.title = 'About';
+    //document.title = 'About';
 
     return (
         <div>

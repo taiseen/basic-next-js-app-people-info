@@ -24,7 +24,6 @@ nav {
   justify-content: flex-end;
   align-items    : flex-end;
   border-bottom  : 1px solid #ddd;
-  
 }
 
 nav a {
@@ -32,8 +31,7 @@ nav a {
 }
 
 nav .logo {
-
-  
+  margin-right: auto;
 }
 
 footer {
@@ -43,4 +41,13 @@ footer {
   margin-top: 60px;
   color     : #777;
   border-top: 1px solid #eaeaea;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found {
+  color          : #4979ff;
+  text-decoration: underline;
 }
