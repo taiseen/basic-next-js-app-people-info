@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
 const index = () => {
+
+    //document.title = 'User List';
+
     return (
         <div>
 
