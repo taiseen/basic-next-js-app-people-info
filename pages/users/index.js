@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link';
 
 const index = () => {
@@ -5,12 +6,17 @@ const index = () => {
     //document.title = 'User List';
 
     return (
-        <div>
 
-            <h1>All Users...</h1>
+        <>
+            <Head>
+                <title>All Users</title>
+                <meta name="description" content="SEO People Page | Google Robot"/>
+            </Head>
 
-            
-        </div>
+            <div>
+                <h1>All Users...</h1>
+            </div>
+        </>
 
     );
 };

@@ -34,6 +34,14 @@ nav .logo {
   margin-right: auto;
 }
 
+.logo {
+  display: flex;
+}
+
+.logo h1 {
+  order     : 1;
+}
+
 footer {
   display   : block;
   text-align: center;
@@ -47,7 +55,7 @@ footer {
   text-align: center;
 }
 
-.not-found a{
+.not-found a {
   color          : #4979ff;
   text-decoration: underline;
 }
