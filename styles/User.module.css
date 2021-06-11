@@ -1,12 +1,18 @@
 .single {
-    padding    : 2px 16px;
-    margin     : 20px 10px;
-    background : #fff;
-    display    : block;
-    border-left: 8px solid #fff;
+    padding      : 2px 16px;
+    margin       : 20px 10px;
+    background   : #fff;
+    display      : block;
+    border-left  : 8px solid #fff;
+    border-top   : 1px dotted transparent;
+    border-bottom: 1px dotted transparent;
+    border-right : 1px dotted transparent;
 }
 
 .single:hover {
-    border-left: 8px solid #4979ff;
-    cursor     : pointer;
+    border-left  : 8px solid #4979ff;
+    border-top   : 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right : 1px solid #000;
+    cursor       : pointer;
 }

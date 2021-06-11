@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const ServerNotFound = () => {
+const Custom500 = () => {
     return (
         <div className="not-found">
             <h1>Oooops.....</h1>
@@ -10,4 +10,4 @@ const ServerNotFound = () => {
     );
 };
 
-export default ServerNotFound;
+export default Custom500;

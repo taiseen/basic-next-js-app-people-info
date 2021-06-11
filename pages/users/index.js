@@ -34,7 +34,7 @@ const AllUsers = (props) => {
 
     const { users } = props;
 
-    console.log(users);
+    //console.log(users);
 
     // document.title = 'User List';
     // this approach not work here...
@@ -56,11 +56,11 @@ const AllUsers = (props) => {
                         const { id, name } = user;
 
                         return (
-                            <div key={id}>
+                            <Link href={'/users/' + id} key={id}>
                                 <a className={styles.single}>
                                     <h3>{name}</h3>
                                 </a>
-                            </div>
+                            </Link>
                         )
                     })
                 }
