@@ -1,5 +1,6 @@
-# People List - Info | Basic NextJs App [`Live Link`](https://)
+# People List - Info | Basic NextJs App [`Live Link`](https://basic-next-js-app-people-info.vercel.app)
 
+# Vercel Hosting :- https://vercel.com/taiseen
 ## Create it Just For Learning Purpose.
 * CSS style object Destructuring
 * Head component > title + meta (For SEO)
