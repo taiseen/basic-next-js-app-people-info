@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const Custom500 = () => {
+    
     return (
         <div className="not-found">
             <h1>Oooops.....</h1>
