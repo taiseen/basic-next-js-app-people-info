@@ -17,10 +17,10 @@ const Details = ({ userInfo }) => {
             </Head>
 
             <div>
-                <h1>{name}</h1>
-                <h3>{email}</h3>
-                <h3>{website}</h3>
-                <h3>{address.city}</h3>
+                <h1>Name : {name}</h1>
+                <h3>Email : {email}</h3>
+                <h3>Website : {website}</h3>
+                <h3>Address : {address?.city}</h3>
             </div>
             <div className={styles.btnBox}>
                 <Link href="/users"><a className={styles.btn}>Back to list</a></Link>
