@@ -20,3 +20,9 @@
   color        : #fff;
   text-align   : center;
 }
+
+.btnBox {
+  display      : flex;
+  background   : #eee;
+  border-radius: 5px;
+}

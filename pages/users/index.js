@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import apiCalling from '../../constants/apiCalling';
 import styles from '../../styles/User.module.css';
+
 
 // 10-Jun-2021
 // inside the function we fetch the data 
@@ -13,16 +15,15 @@ import styles from '../../styles/User.module.css';
 // this runs before the component is rendered... 
 export const getStaticProps = async () => {
 
-    const url = 'https://jsonplaceholder.typicode.com/users';
-    const res = await fetch(url);
-    const data = await res.json();
+    const data = await apiCalling();
 
     // Now, How do we use this "array of object" ==> data inside our component?
     return {
         props: { users: data }
-        // now this data is available inside our component through props
+        // now this data is available inside our component through props..
     }
 }
+
 
 
 // 10-Jun-2021 
@@ -56,7 +57,10 @@ const AllUsers = (props) => {
                         const { id, name } = user;
 
                         return (
-                            <Link href={'/users/' + id} key={id}>
+                            <Link
+                                key={id}
+                                href={'/users/' + id}
+                            >
                                 <a className={styles.single}>
                                     <h3>{name}</h3>
                                 </a>

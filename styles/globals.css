@@ -36,10 +36,11 @@ nav .logo {
 
 .logo {
   display: flex;
+  cursor : pointer;
 }
 
 .logo h1 {
-  order     : 1;
+  order: 1;
 }
 
 footer {

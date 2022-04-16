@@ -1,39 +1,8 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import apiCalling from '../../constants/apiCalling';
+import styles from '../../styles/Home.module.css';
 
-// How to get id from url?
-export const getStaticPaths = async () => {
-
-    const url = 'https://jsonplaceholder.typicode.com/users/';
-    const res = await fetch(url);
-    const data = await res.json();
-
-    const paths = data.map(user => {
-        return {
-            params: { id: user.id.toString() }
-        }
-    })
-
-    return {
-        paths,
-        fallback: false
-
-    }
-}
-
-// its run multiple times... 
-export const getStaticProps = async (context) => {
-
-    const id = context.params.id;
-    const url = 'https://jsonplaceholder.typicode.com/users/' + id;
-    const res = await fetch(url);
-    const data = await res.json();
-
-    return {
-        props: {
-            userInfo: data
-        }
-    }
-}
 
 const Details = ({ userInfo }) => {
 
@@ -53,8 +22,42 @@ const Details = ({ userInfo }) => {
                 <h3>{website}</h3>
                 <h3>{address.city}</h3>
             </div>
+            <div className={styles.btnBox}>
+                <Link href="/users"><a className={styles.btn}>Back to list</a></Link>
+                <Link href="/"><a className={styles.btn}>Back to Home</a></Link>
+            </div>
         </>
     );
 };
 
 export default Details;
+
+
+
+// its run multiple times... 
+export const getStaticProps = async (context) => {
+
+    const id = context.params.id;
+    
+    const data = await apiCalling(id);
+
+    return {
+        props: {
+            userInfo: data
+        }
+    }
+}
+
+
+// How to get id from url?
+export const getStaticPaths = async () => {
+
+    const data = await apiCalling();
+
+    const paths = data.map(user => ({ params: { id: user.id.toString() } }));
+
+    return {
+        paths,
+        fallback: false
+    }
+}
